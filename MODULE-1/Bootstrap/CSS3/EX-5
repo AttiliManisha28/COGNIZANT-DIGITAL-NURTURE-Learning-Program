@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Typography Styling Example</title>
+
+   
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-style: italic;
+            font-weight: 600;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #34495e;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        
+        .description {
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #555;
+            letter-spacing: 0.5px;
+            text-align: justify;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>City Council Branding Guide</h1>
+
+    <h2>Typography Overview</h2>
+
+    <p class="description">
+        Typography plays a crucial role in establishing the brand's identity. By using carefully selected fonts, consistent sizing, and clean alignment, we ensure that content is both beautiful and highly readable. This paragraph demonstrates how font styles, spacing, and alignment improve the reader's experience across all devices and platforms.
+    </p>
+
+</body>
+</html>
