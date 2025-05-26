@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Save User Preferences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #message {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Choose Your Preferred Event</h2>
+
+    <label for="eventType">Select Event Type:</label>
+    <select id="eventType">
+      <option value="">-- Choose an event --</option>
+      <option value="Music Festival">Music Festival</option>
+      <option value="Art Workshop">Art Workshop</option>
+      <option value="Marathon">Marathon</option>
+      <option value="Food Fair">Food Fair</option>
+    </select>
+
+    <button onclick="savePreference()">Save Preference</button>
+    <button onclick="clearPreferences()" style="background-color: #dc3545;">Clear Preferences</button>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const selectElement = document.getElementById('eventType');
+    const message = document.getElementById('message');
+
+    
+    window.onload = function() {
+      const savedPreference = localStorage.getItem('preferredEvent');
+      if (savedPreference) {
+        selectElement.value = savedPreference;
+        message.textContent = `Loaded preference: ${savedPreference}`;
+      }
+    };
+
+    
+    function savePreference() {
+      const selectedValue = selectElement.value;
+      if (selectedValue) {
+        localStorage.setItem('preferredEvent', selectedValue);
+        sessionStorage.setItem('lastSessionPreference', selectedValue); // optional use of sessionStorage
+        message.textContent = `✅ Preference saved: ${selectedValue}`;
+      } else {
+        message.textContent = `⚠️ Please select an event first.`;
+      }
+    }
+
+   
+    function clearPreferences() {
+      localStorage.removeItem('preferredEvent');
+      sessionStorage.clear();
+      selectElement.value = "";
+      message.textContent = `❌ Preferences cleared.`;
+    }
+  </script>
+
+</body>
+</html>
