@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Debugging with Chrome DevTools</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      width: 80%;  
+      padding: 20px;
+      background-color: #ffffff;
+      margin-top: 30px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DevTools Debugging Exercise</h1>
+  </header>
+
+  <div class="content">
+    <h2>Welcome!</h2>
+    <p>This page contains a few bugs for you to find using Chrome DevTools.</p>
+
+    <button onclick="testDebugging()">Run Debug Test</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function testDebugging() {
+      console.log("Debug test started.");
+
+      let userName = "Guest";
+
+      
+      let greeting = "Hello, " + userName + "! Thanks for visiting.";
+
+      console.log("Greeting ready:", greeting);
+
+      
+      document.getElementById("reslt").innerText = greeting; // Bug here (reslt is wrong)
+
+      console.warn("This is a sample warning.");
+    }
+  </script>
+
+</body>
+</html>
