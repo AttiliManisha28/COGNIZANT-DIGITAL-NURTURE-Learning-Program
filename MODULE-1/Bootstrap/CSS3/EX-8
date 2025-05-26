@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Box Model & Layout Control</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: #fafafa;
+  }
+
+  
+  .eventCard {
+    border: 2px solid #007BFF;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    background-color: #e9f0ff;
+    border-radius: 8px;
+  }
+
+  
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline-offset: 3px;
+    transition: outline-color 0.3s ease;
+  }
+
+  input[type="text"]:focus, input[type="email"]:focus {
+    outline: 3px solid #007BFF;
+  }
+
+ 
+  .box {
+    width: 120px;
+    height: 80px;
+    background-color: #007BFF;
+    color: white;
+    line-height: 80px;
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    display: inline-block;
+  }
+
+  
+  .hidden {
+    visibility: hidden;
+  }
+
+ 
+  .none {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+  <h2>Event Card with Margin, Padding, and Border</h2>
+  <div class="eventCard">
+    <h3>Community Meetup</h3>
+    <p>Date: June 15, 2025</p>
+    <p>Location: Town Hall</p>
+  </div>
+
+  <h2>Form Field Highlight (Outline on Focus)</h2>
+  <form>
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" placeholder="Enter your name" /><br />
+    
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" placeholder="Enter your email" /><br />
+  </form>
+
+  <h2>Visibility: Hidden vs Display: None</h2>
+  <div>
+    <div class="box">Visible</div>
+    <div class="box hidden">Hidden</div>
+    <div class="box none">None</div>
+  </div>
+  <p>
+    The blue box labeled <strong>"Hidden"</strong> is invisible but <em>still occupies space</em>.  
+    The box labeled <strong>"None"</strong> is completely removed and takes <em>no space</em>.
+  </p>
+
+</body>
+</html>
