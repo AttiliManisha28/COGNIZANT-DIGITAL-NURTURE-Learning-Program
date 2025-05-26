@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multi-Column News Article</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    padding: 40px;
+    background-color: #fafafa;
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .news-article {
+    width: 80%;
+    margin: 0 auto;
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    line-height: 1.6;
+    font-size: 18px;
+    color: #222;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Community Bulletin</h1>
+
+  <section class="news-article">
+    <p>
+      The community center has announced a series of upcoming events designed to engage and inspire residents of all ages. From art workshops to outdoor fitness classes, there is something for everyone. The local library will also be hosting monthly book clubs and storytelling sessions for children and adults alike.
+    </p>
+    <p>
+      Environmental initiatives are gaining momentum, with neighborhood clean-up days scheduled throughout the summer. Volunteers are encouraged to join in and contribute to making the community greener and more sustainable. Additionally, local businesses are offering special discounts during the annual "Shop Local" campaign to support the economy.
+    </p>
+    <p>
+      Residents can look forward to the summer festival in July, featuring live music, food vendors, and cultural exhibitions celebrating the diverse heritage of the area. Safety measures will be in place to ensure a fun and secure environment for all attendees. Stay tuned for more updates through the community newsletter and social media channels.
+    </p>
+    <p>
+      Lastly, the city council has approved funding for new playground equipment and park renovations, aiming to improve recreational spaces across the neighborhood. Public input sessions are scheduled next month, providing an opportunity for citizens to share their ideas and priorities.
+    </p>
+  </section>
+
+</body>
+</html>
