@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Typography Utilities</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="display-1">Display 1 Heading</h1>
+    <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+    <p class="text-muted">This text is muted and appears less important.</p>
+    <p class="fw-bold">This text is bold using Bootstrap's <code>fw-bold</code> class.</p>
+    <p class="fst-italic">This text is italic using <code>fst-italic</code> class.</p>
+    <p class="text-primary">This text uses the primary theme color.</p>
+    <p class="text-center">This paragraph is centered using <code>text-center</code>.</p>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
