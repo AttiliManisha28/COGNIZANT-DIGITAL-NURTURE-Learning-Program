@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Styled Events Admin Table</title>
+    <style>
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #004080;
+            color: white;
+        }
+
+        
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center; font-family: Arial, sans-serif; color:#004080;">Events Admin Table</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Event ID</th>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Attendees</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Spring Festival</td>
+                <td>March 21, 2025</td>
+                <td>Central Park</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Tech Conference</td>
+                <td>May 10, 2025</td>
+                <td>Convention Center</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Art Expo</td>
+                <td>July 15, 2025</td>
+                <td>City Gallery</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Music Concert</td>
+                <td>September 5, 2025</td>
+                <td>Downtown Arena</td>
+                <td>2000</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
