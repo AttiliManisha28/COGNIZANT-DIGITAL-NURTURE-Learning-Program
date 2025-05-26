@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Debug & Test with DevTools</title>
+<style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #003d80;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  
+  @media (max-width: 600px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+    nav a {
+      padding: 12px;
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Debug & Test Demo Page</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Features</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>How to Debug Responsive Layouts Using DevTools</h2>
+  <p>
+    This demo page is styled with CSS embedded above.<br>
+    To test how it looks on different devices, open Chrome DevTools (F12 or right-click → Inspect) and toggle the device toolbar (<kbd>Ctrl+Shift+M</kbd> or click the phone/tablet icon).
+  </p>
+
+  <p>
+    <strong>Tips for debugging:</strong>
+    <ul>
+      <li>Resize viewport to simulate phones, tablets, desktops.</li>
+      <li>Use the <em>Elements</em> tab to inspect styles and tweak CSS live.</li>
+      <li>Check the <em>Styles</em> pane to see which CSS rules apply and experiment with enabling/disabling or changing values.</li>
+      <li>Use the <em>Network</em> tab to confirm that your external CSS files load successfully (shows status code 200).</li>
+      <li>Watch out for media queries — test their behavior by changing viewport width.</li>
+    </ul>
+  </p>
+
+  <p>Try changing the window width now or use the device toolbar to see the nav links stack vertically on small screens.</p>
+</main>
+
+</body>
+</html>
