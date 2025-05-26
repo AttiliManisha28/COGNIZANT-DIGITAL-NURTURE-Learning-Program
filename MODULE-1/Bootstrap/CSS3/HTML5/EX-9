@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Find Nearby Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #e9f5ff;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Locate Nearby Events</h2>
+    <p>Click the button below to find events near your current location.</p>
+
+    <button onclick="getLocation()">Find Nearby Events</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function getLocation() {
+      const output = document.getElementById("output");
+
+      if (!navigator.geolocation) {
+        output.innerHTML = "<span class='error'>Geolocation is not supported by your browser.</span>";
+        return;
+      }
+
+      output.innerHTML = "Locating…";
+
+      navigator.geolocation.getCurrentPosition(showPosition, showError, {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      });
+    }
+
+    function showPosition(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      document.getElementById("output").innerHTML = `
+        <div class='success'>
+          ✅ Location found!<br>
+          <strong>Latitude:</strong> ${latitude}<br>
+          <strong>Longitude:</strong> ${longitude}
+        </div>
+      `;
+    }
+
+    function showError(error) {
+      let message = "Unknown error.";
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          message = "❌ Permission to access location was denied.";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          message = "❌ Location information is unavailable.";
+          break;
+        case error.TIMEOUT:
+          message = "❌ The request to get your location timed out.";
+          break;
+        case error.UNKNOWN_ERROR:
+          message = "❌ An unknown error occurred.";
+          break;
+      }
+      document.getElementById("output").innerHTML = `<div class='error'>${message}</div>`;
+    }
+  </script>
+
+</body>
+</html>
