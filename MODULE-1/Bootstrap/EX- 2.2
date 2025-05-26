@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap JS Plugins Example</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-center text-primary">Bootstrap JavaScript Plugins Demo</h1>
+    
+    <p>
+      <a class="btn btn-success mt-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Toggle Info Section
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        This content is shown/hidden using Bootstrap's Collapse JavaScript plugin.
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-secondary mt-4" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+      Hover me for tooltip
+    </button>
+  </div>
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =>
+      new bootstrap.Tooltip(tooltipTriggerEl)
+    );
+  </script>
+</body>
+</html>
