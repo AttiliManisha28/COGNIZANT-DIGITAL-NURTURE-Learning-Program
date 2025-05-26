@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Feedback</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f4f4f4;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #charCount {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    #eventImage {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 200px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #eventImage.enlarged {
+      transform: scale(1.5);
+      border-color: #007BFF;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    #confirmation {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+
+    #feeDisplay {
+      margin-top: 10px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="feedbackForm">
+    <h2>Event Feedback Form</h2>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" placeholder="Enter 10-digit phone number" onblur="validatePhone()" required />
+
+    <label for="eventSelect">Select Event:</label>
+    <select id="eventSelect" onchange="showFee()" required>
+      <option value="">-- Select an Event --</option>
+      <option value="10">Community Fair</option>
+      <option value="20">Local Run</option>
+      <option value="15">Art Workshop</option>
+    </select>
+
+    <div id="feeDisplay"></div>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" rows="4" placeholder="Type your feedback here..."></textarea>
+    <div id="charCount">Characters: 0</div>
+
+    <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+    <div id="confirmation"></div>
+
+    <img src="https://via.placeholder.com/200x120?text=Event+Image" id="eventImage" alt="Event" ondblclick="enlargeImage()" title="Double-click to enlarge" />
+  </form>
+
+  <script>
+    // Validate phone number
+    function validatePhone() {
+      const phoneInput = document.getElementById("phone");
+      const phone = phoneInput.value.trim();
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        phoneInput.focus();
+      }
+    }
+
+    
+    function showFee() {
+      const eventSelect = document.getElementById("eventSelect");
+      const fee = eventSelect.value;
+      const eventName = eventSelect.options[eventSelect.selectedIndex].text;
+      const display = document.getElementById("feeDisplay");
+      display.textContent = fee ? `${eventName} Fee: $${fee}` : "";
+    }
+
+    
+    function submitFeedback() {
+      const confirmation = document.getElementById("confirmation");
+      confirmation.textContent = "Thank you! Your feedback has been submitted.";
+    }
+
+    
+    function enlargeImage() {
+      const img = document.getElementById("eventImage");
+      img.classList.toggle("enlarged");
+    }
+
+    
+    const feedback = document.getElementById("feedback");
+    const charCount = document.getElementById("charCount");
+
+    feedback.addEventListener("keyup", () => {
+      charCount.textContent = `Characters: ${feedback.value.length}`;
+    });
+  </script>
+
+</body>
+</html>
