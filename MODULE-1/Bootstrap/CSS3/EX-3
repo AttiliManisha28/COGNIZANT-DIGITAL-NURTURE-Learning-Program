@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Selectors Playground</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        h2 {
+            color: darkgreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 15px;
+        }
+
+        
+        #mainHeader {
+            background-color: #ffa500; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+       
+        .eventCard {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+        }
+
+        
+        h3, p {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div id="mainHeader">Welcome to the Event Portal</div>
+
+    
+    <h2>Upcoming Events</h2>
+
+    
+    <div class="eventCard">
+        <h3>Spring Festival</h3>
+        <p>Date: March 21, 2025</p>
+        <p>Location: Central Park</p>
+    </div>
+
+    <div class="eventCard">
+        <h3>Tech Conference 2025</h3>
+        <p>Date: May 10, 2025</p>
+        <p>Location: Convention Center</p>
+    </div>
+
+</body>
+</html>
