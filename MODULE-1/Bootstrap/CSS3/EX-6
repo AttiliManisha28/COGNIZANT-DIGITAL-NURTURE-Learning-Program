@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Link and List Styling</title>
+    <style>
+        
+        a:link {
+            color: #007BFF; /* blue */
+            text-decoration: none;
+        }
+        a:visited {
+            color: #551A8B; /* purple */
+        }
+        a:hover {
+            color: #0056b3; /* darker blue */
+            text-decoration: underline;
+        }
+        a:active {
+            color: #FF4500; /* orange-red */
+        }
+
+        
+        ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            padding-left: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+
+        
+        nav ul {
+            list-style-type: none; /* remove bullets */
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            margin: 0;
+            padding: 8px 12px;
+        }
+
+        nav ul li a {
+            font-weight: bold;
+            color: #444;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h2>Important Links</h2>
+    <p>Visit these sites for more info:</p>
+    <ul>
+        <li><a href="https://www.example.com">Example.com</a></li>
+        <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
+        <li><a href="https://www.openai.com">OpenAI</a></li>
+    </ul>
+
+</body>
+</html>
