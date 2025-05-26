@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>City Council Themed Portal</title>
+    <style>
+        
+        body {
+            background-color: #004080; /* fallback dark blue */
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff; /* white text */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            /* To improve readability on image */
+            background-blend-mode: overlay;
+            background-color: rgba(0, 64, 128, 0.7); /* dark blue with opacity on top */
+        }
+
+        
+        h2.section-header {
+            background: linear-gradient(90deg, #0077cc, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        
+        p {
+            color: rgba(255, 255, 255, 0.85); /* slightly transparent white */
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 700px;
+        }
+
+        
+        .cta-button {
+            background-color: #ff6600; /* bright orange */
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+        .cta-button:hover {
+            background-color: rgba(255, 102, 0, 0.8); /* orange with transparency */
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="section-header">City Council Portal</h2>
+
+    <p>Welcome to the official city council portal. Stay updated with the latest news, events, and community projects.</p>
+
+    <button class="cta-button">Explore More</button>
+
+</body>
+</html>
