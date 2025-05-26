@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 450px;
+      width: 100%;
+    }
+
+    form h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007BFF;
+      color: white;
+      font-weight: bold;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    output {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+      font-size: 1.1rem;
+      min-height: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <form id="registrationForm" novalidate>
+    <h2>Register for an Event</h2>
+
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your full name"
+      required
+      autofocus
+    />
+
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+    />
+
+    <label for="eventDate">Event Date:</label>
+    <input
+      type="date"
+      id="eventDate"
+      name="eventDate"
+      required
+    />
+
+    <label for="eventType">Event Type:</label>
+    <select id="eventType" name="eventType" required>
+      <option value="" disabled selected>Select an event</option>
+      <option value="festival">Community Festival</option>
+      <option value="cleanup">Neighborhood Cleanup</option>
+      <option value="charityRun">Charity Run</option>
+      <option value="artFair">Local Art Fair</option>
+    </select>
+
+    <label for="message">Message (optional):</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Any special requirements or questions?"
+    ></textarea>
+
+    <button type="submit">Submit Registration</button>
+
+    <output id="confirmationMessage" for="registrationForm"></output>
+  </form>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const output = document.getElementById('confirmationMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      
+      if (!form.checkValidity()) {
+        // If form is invalid, trigger HTML5 validation UI
+        form.reportValidity();
+        output.textContent = '';
+        return;
+      }
+
+      
+      const name = form.name.value.trim();
+      const eventType = form.eventType.options[form.eventType.selectedIndex].text;
+      const date = form.eventDate.value;
+
+      
+      const formattedDate = new Date(date).toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      
+      output.textContent = `Thank you, ${name}! You have successfully registered for the ${eventType} on ${formattedDate}.`;
+      
+      form.reset();
+      form.name.focus();
+    });
+  </script>
+</body>
+</html>
