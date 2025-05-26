@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Community Event Portal</title>
+    <!-- You can add external CSS and JS files here -->
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+   
+    <main>
+        <header>
+            <h1>Welcome to the Local Community Event Portal</h1>
+            <p>Your gateway to upcoming events and services in the city.</p>
+        </header>
+
+        <!-- Content sections can be added here -->
+        <section>
+            <h2>Upcoming Events</h2>
+            <p>Check out the latest community events and register to participate.</p>
+        </section>
+
+        <section>
+            <h2>Event Locations</h2>
+            <p>Find out where each event will be held.</p>
+        </section>
+
+        <section>
+            <h2>Community Services</h2>
+            <p>Access basic city services easily through our portal.</p>
+        </section>
+    </main>
+
+   
+    <footer>
+        <p>&copy; 2025 Local City Council. All rights reserved.</p>
+    </footer>
+</body>
+</html>
