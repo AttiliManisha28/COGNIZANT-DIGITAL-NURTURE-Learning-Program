@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Community Event Portal</title>
+    <style>
+        
+        #welcomeBanner {
+            background-color: #007BFF; /* blue background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+       
+        .highlight {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+       
+        .event-image {
+            border: 3px solid #007BFF;
+            border-radius: 8px;
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+       
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 15px 20px;
+            margin-top: 20px;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: top;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+
+        caption {
+            caption-side: top;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+   
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank" rel="noopener">Help</a></li>
+        </ul>
+    </nav>
+
+    
+    <div id="welcomeBanner">
+        Welcome back, <span class="highlight">John Doe</span>! 
+        <span style="color: red; font-weight: bold;">Special Offer: Register for 2 events, get 1 free!</span>
+    </div>
+
+    <main>
+        
+        <section id="home">
+            <header>
+                <h1 class="highlight">Welcome to the Local Community Event Portal</h1>
+                <p>Your gateway to upcoming events and services in the city.</p>
+            </header>
+        </section>
+
+       
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Check out the latest community events and register to participate.</p>
+
+            
+            <table>
+                <caption>Past Community Events Gallery</caption>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="images/festival.jpg" alt="Community Festival 2024" title="Community Festival 2024" class="event-image" />
+                            <br />
+                            Community Festival 2024
+                        </td>
+                        <td>
+                            <img src="images/cleanup.jpg" alt="Neighborhood Cleanup Day" title="Neighborhood Cleanup Day" class="event-image" />
+                            <br />
+                            Neighborhood Cleanup Day
+                        </td>
+                        <td>
+                            <img src="images/charity-run.jpg" alt="Annual Charity Run" title="Annual Charity Run" class="event-image" />
+                            <br />
+                            Annual Charity Run
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/art-fair.jpg" alt="Local Art Fair" title="Local Art Fair" class="event-image" />
+                            <br />
+                            Local Art Fair
+                        </td>
+                        <td>
+                            <img src="images/music-night.jpg" alt="Community Music Night" title="Community Music Night" class="event-image" />
+                            <br />
+                            Community Music Night
+                        </td>
+                        <td>
+                            <img src="images/farmers-market.jpg" alt="Farmers Market" title="Farmers Market" class="event-image" />
+                            <br />
+                            Farmers Market
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out.</p>
+            <address>
+                Local City Council<br />
+                123 Main Street<br />
+                Cityville, State<br />
+                Phone: (123) 456-7890<br />
+                Email: <a href="mailto:info@citycouncil.gov">info@citycouncil.gov</a>
+            </address>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2025 Local City Council. All rights reserved.</p>
+    </footer>
+</body>
+</html>
