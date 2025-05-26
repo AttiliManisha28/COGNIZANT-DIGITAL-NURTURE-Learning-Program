@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Inclusion Methods Combined</title>
+
+    <style>
+        
+        body {
+            background-color: #f0f8ff; 
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        
+        .header-secondary {
+            color: darkblue;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        
+        .paragraph-text {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h1 style="color: red;">This Heading is Red (Inline Style)</h1>
+
+    
+    <h2 class="header-secondary">This is a Secondary Heading</h2>
+
+    <p class="paragraph-text">This paragraph uses styles from the external stylesheet (here embedded).</p>
+
+
+</body>
+</html>
