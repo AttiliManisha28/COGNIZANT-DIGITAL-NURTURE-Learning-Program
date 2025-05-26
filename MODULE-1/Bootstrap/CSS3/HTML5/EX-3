@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Community Event Portal</title>
+    <style>
+        
+        #welcomeBanner {
+            background-color: #007BFF; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .highlight {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank" rel="noopener">Help</a></li>
+        </ul>
+    </nav>
+
+    
+    <div id="welcomeBanner">
+        Welcome back, <span class="highlight">John Doe</span>! 
+        <span style="color: red; font-weight: bold;">Special Offer: Register for 2 events, get 1 free!</span>
+    </div>
+
+    <main>
+        
+        <section id="home">
+            <header>
+                <h1 class="highlight">Welcome to the Local Community Event Portal</h1>
+                <p>Your gateway to upcoming events and services in the city.</p>
+            </header>
+        </section>
+
+        
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <p>Check out the latest community events and register to participate.</p>
+        </section>
+
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out.</p>
+            <address>
+                Local City Council<br />
+                123 Main Street<br />
+                Cityville, State<br />
+                Phone: (123) 456-7890<br />
+                Email: <a href="mailto:info@citycouncil.gov">info@citycouncil.gov</a>
+            </address>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2025 Local City Council. All rights reserved.</p>
+    </footer>
+</body>
+</html>
