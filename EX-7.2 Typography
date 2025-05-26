@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Transform Utilities</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h3 class="mb-4">Text Transformation Examples</h3>
+
+    <p class="text-uppercase">this text will appear in uppercase</p>
+    <p class="text-lowercase">THIS TEXT WILL APPEAR IN LOWERCASE</p>
+    <p class="text-capitalize">this text will appear capitalized</p>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
